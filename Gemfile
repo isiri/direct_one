@@ -18,6 +18,21 @@ end
 
 gem 'jquery-rails'
 
+gem 'haml', '>= 3.1.2'
+gem 'jquery-rails'
+gem "devise", ">= 1.4.9"
+
+#For Rails 3.1, a JavaScript runtime is needed for Linux Ubuntu. It is not needed for Mac OS X or Windows.
+gem 'execjs'
+gem 'therubyracer'
+ 
+gem 'haml-rails', '>= 0.3.4', :group => [:development]
+
+#these are for heroku can be removed latter
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3' # you will need this too
+  gem 'pg'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
